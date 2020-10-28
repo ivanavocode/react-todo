@@ -1,8 +1,14 @@
 import React, { Fragment } from "react";
+import {TransitionGroup, CSSTransition} from 'react-transition-group';
 
 export const Notes = ({ notes, onRemove }) => (
-  <ul className="list-group">
+  <TransitionGroup component="ul" className="list-group">
     {notes.map((note) => (
+      <CSSTransition
+        key={note.id}
+        classNames={'note'}
+        timeout={800}
+      >
       <li 
       className="list-group-item note" 
        key={note.id}>
@@ -17,6 +23,8 @@ export const Notes = ({ notes, onRemove }) => (
           &times;
         </button>
       </li>
+      </CSSTransition>
     ))}
-  </ul>
+    
+  </TransitionGroup>
 );
