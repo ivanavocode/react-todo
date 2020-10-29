@@ -8,10 +8,10 @@ export const Navbar = () => (
     </div>
     <ul className="navbar-nav">
       <li className="nav-item">
-        <NavLink className="nav-link" to="/" exact>Главная</NavLink>
+        <NavLink className="nav-link" to="/" exact>Home</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink className="nav-link" to="/about">Информация</NavLink>
+        <NavLink className="nav-link" to="/about">Info</NavLink>
       </li>
     </ul>
   </nav>
